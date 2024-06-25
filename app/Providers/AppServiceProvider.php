@@ -24,6 +24,7 @@ class AppServiceProvider extends ServiceProvider
         //self-explanatory
 //        Model::preventLazyLoading();
 
+//        If you dont want to use Tailwind css
 //        Paginator::useBootstrapFive();
     }
 }
