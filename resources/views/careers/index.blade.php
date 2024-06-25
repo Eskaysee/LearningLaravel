@@ -2,9 +2,9 @@
     <x-slot:heading>Job Listing</x-slot:heading>
     <div class="space-y-4">
         @foreach($jobs as $job)
-            <a href="/job/{{ $job['id'] }}" class="block px-4 border rounded-lg">
+            <a href="/careers/{{ $job['id'] }}" class="block px-4 border rounded-lg">
                 <div> <u> {{ $job -> employer -> name }} </u> </div>
-                <strong>{{ $job['title'] }}</strong>: Pays {{ $job['salary'] }} per month
+                <strong>{{ $job['title'] }}</strong>: Pays R{{ $job['salary'] }} per month
             </a>
         @endforeach
     </div>

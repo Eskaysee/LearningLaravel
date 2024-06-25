@@ -21,7 +21,7 @@ class JobFactory extends Factory
         return [
             'title' => fake()->jobTitle(),
             'employer_id' => Employer::factory(),
-            'salary' => fake()->randomFloat(2, 1000, 100000)
+            'salary' => fake()->randomFloat(2, 10000, 100000)
         ];
     }
 }
