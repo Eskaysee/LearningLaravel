@@ -33,6 +33,24 @@ Route::get('/careers/{id}', function ($id) {
     return view('careers.show', ['job' => $job]);
 });
 
+Route::get('/careers/{id}/edit', function ($id) {
+    $job = Job::find($id);
+    return view('careers.edit', ['job' => $job]);
+});
+
+Route::patch('/careers/{job}', function (Job $job) {
+    $job->update(request()->validate([
+        'title' => ['required', 'min:3'],
+        'salary' => ['required']
+    ]));
+    return redirect('/careers/' . $job->id);
+});
+
+Route::delete('/careers/{job}', function (Job $job) {
+    $job->delete();
+    return redirect('/careers');
+});
+
 Route::post('/careers', function () {
     request() -> validate([
         'title' => ['required', 'min:3'],
