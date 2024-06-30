@@ -13,10 +13,10 @@
                     </x-form-field>
 
                     <x-form-field>
-                        <x-form-label for="email_address">Email Address</x-form-label>
+                        <x-form-label for="email">Email Address</x-form-label>
                         <div class="mt-2">
-                            <x-form-input type="email" name="email_address" id="email_address" placeholder="user@domain.com" required/>
-                            <x-form-error name="email_address"/>
+                            <x-form-input type="email" name="email" id="email" placeholder="user@domain.com" required/>
+                            <x-form-error name="email"/>
                         </div>
                     </x-form-field>
 

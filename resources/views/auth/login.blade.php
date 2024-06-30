@@ -5,10 +5,10 @@
             <div class="border-b border-gray-900/10 pb-12">
                 <div class="grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
                     <x-form-field>
-                        <x-form-label for="email_address">Email Address</x-form-label>
+                        <x-form-label for="email">Email Address</x-form-label>
                         <div class="mt-2">
-                            <x-form-input type="email" name="email_address" id="email_address" :value="old('email_address')" required/>
-                            <x-form-error name="email_address"/>
+                            <x-form-input type="email" name="email" id="email" :value="old('email')" required/>
+                            <x-form-error name="email"/>
                         </div>
                     </x-form-field>
 

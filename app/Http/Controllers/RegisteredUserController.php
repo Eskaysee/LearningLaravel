@@ -18,7 +18,7 @@ class RegisteredUserController extends Controller
         //validate the request
         $validFields = $request->validate([
             'full_name' => ['required', 'min:3'],
-            'email_address' => ['required', 'email'],
+            'email' => ['required', 'email'],
             'password' => ['required', 'confirmed']
         ]);
 
