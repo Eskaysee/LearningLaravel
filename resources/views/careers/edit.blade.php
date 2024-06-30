@@ -32,14 +32,6 @@
                             @enderror
                         </div>
                     </div>
-                </div>
-                <div class="mt-10">
-{{--                    @if($errors->any())--}}
-{{--                        @foreach($errors->all() as $error)--}}
-{{--                            <li class="text-red-500 italic"> {{ $error }} </li>--}}
-{{--                        @endforeach--}}
-{{--                    @endif--}}
-                </div>
             </div>
         </div>
 

@@ -23,16 +23,16 @@
                     <x-form-field>
                         <x-form-label for="password">Password</x-form-label>
                         <div class="mt-2">
-                            <x-form-input type="password" name="secret_password" id="secret_password" required/>
-                            <x-form-error name="secret_password"/>
+                            <x-form-input type="password" name="password" id="password" required/>
+                            <x-form-error name="password"/>
                         </div>
                     </x-form-field>
 
                     <x-form-field>
                         <x-form-label for="password_confirmation">Retype Password</x-form-label>
                         <div class="mt-2">
-                            <x-form-input type="password" name="secret_password_confirmation" id="secret_password_confirmation" required/>
-                            <x-form-error name="secret_password_confirmation"/>
+                            <x-form-input type="password" name="password_confirmation" id="password_confirmation" required/>
+                            <x-form-error name="password_confirmation"/>
                         </div>
                     </x-form-field>
                 </div>

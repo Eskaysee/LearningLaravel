@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Job;
+use Illuminate\Routing\Controllers\Middleware;
+use Illuminate\Support\Facades\Gate;
 
 class JobController extends Controller
 {
@@ -36,7 +38,7 @@ class JobController extends Controller
         Job::create([
             'title' => request('title'),
             'salary' => request('salary'),
-            'employer_id' => 1
+            'employer_id' => 16
         ]);
         return redirect('/careers');
     }
@@ -52,6 +54,7 @@ class JobController extends Controller
      * Show the form for editing the specified resource.
      */
     public function edit(Job $job) {
+//        Gate::authorize('edit-job', $job);
         return view('careers.edit', ['job' => $job]);
     }
 
@@ -73,4 +76,5 @@ class JobController extends Controller
         $job->delete();
         return redirect('/careers');
     }
+
 }

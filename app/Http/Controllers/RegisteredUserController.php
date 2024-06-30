@@ -19,14 +19,14 @@ class RegisteredUserController extends Controller
         $validFields = $request->validate([
             'full_name' => ['required', 'min:3'],
             'email_address' => ['required', 'email'],
-            'secret_password' => ['required', 'confirmed']
+            'password' => ['required', 'confirmed']
         ]);
 
         Log::debug('and here');
 
         //create the user
-        $user = User::create($request->all());
-//
+        $user = User::create($validFields);
+
 //        //log the user in
         Auth::login($user);
 

@@ -19,15 +19,13 @@ class SessionController extends Controller
     {
         //validate and attempt to login
         $AuthN = Auth::attempt($request->validate([
-            'email' => ['required', 'email'],
+            'email_address' => ['required', 'email'],
             'password' => ['required']
         ]));
 
-        dd($AuthN);
-
         if (!$AuthN) {
             throw ValidationException::withMessages([
-                'email' => 'Invalid Credentials: Password and/or email is incorrect/does not match'
+                'email_address' => 'Invalid Credentials: Password and/or email is incorrect/does not match'
             ]);
         } else {
             $request->session()->regenerate();
